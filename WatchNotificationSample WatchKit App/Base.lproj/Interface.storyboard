@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8121.20" systemVersion="15A216g" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.16"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8066.14"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchNotificationSample_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label width="131" height="68" alignment="left" text="Label" textAlignment="center" id="qdC-1f-3hz"/>
+                    </items>
+                    <connections>
+                        <outlet property="mainLabel" destination="qdC-1f-3hz" id="e5B-ZO-Iyu"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="178" y="251"/>
+        </scene>
+        <!--OKGoogle-->
+        <scene sceneID="hvn-kp-Gtu">
+            <objects>
+                <controller identifier="OKGoogle" hidesWhenLoading="NO" id="trj-Ix-38a">
+                    <items>
+                        <label width="136" alignment="left" text="OK Google" textAlignment="center" id="8n4-xN-97X"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="463" y="50"/>
+        </scene>
+        <!--Error-->
+        <scene sceneID="Dpv-ec-yLf">
+            <objects>
+                <controller identifier="Error" hidesWhenLoading="NO" id="odv-ss-jME">
+                    <items>
+                        <label width="131" alignment="left" text="Error" textAlignment="center" id="bn9-cS-d3i">
+                            <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="463" y="287"/>
+        </scene>
+        <!--Success-->
+        <scene sceneID="oHS-lG-UeU">
+            <objects>
+                <controller identifier="Success" hidesWhenLoading="NO" id="kJQ-Nn-tjH">
+                    <items>
+                        <label width="135" alignment="left" text="Success" textAlignment="center" id="EvU-uJ-9Ta">
+                            <color key="textColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="629" y="287"/>
+        </scene>
+        <!--HiSiri-->
+        <scene sceneID="3yn-6G-baj">
+            <objects>
+                <controller identifier="HiSiri" hidesWhenLoading="NO" id="isA-MI-ITu">
+                    <items>
+                        <label width="134" alignment="left" text="Hi Siri" textAlignment="center" id="Rk7-xS-NxI"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="629" y="50"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label width="134" height="55" alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="sample1" id="JfB-70-Muf">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="sashColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                    </notificationCategory>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="C7p-5v-fOn"/>
+                        <segue destination="qZt-Mv-K6X" kind="relationship" relationship="dynamicNotificationInterface" id="kFz-41-635"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="156" y="893"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="xYu-7V-vpR">
+            <objects>
+                <controller hidesWhenLoading="NO" id="qZt-Mv-K6X" customClass="NotificationController" customModule="WatchNotificationSample_WatchKit_Extension">
+                    <items>
+                        <label width="132" height="60" alignment="left" text="Label" textAlignment="left" numberOfLines="3" id="6gt-Bj-3Nn"/>
+                        <imageView alignment="left" id="qVP-Vr-RM9"/>
+                    </items>
+                    <connections>
+                        <outlet property="mainImageView" destination="qVP-Vr-RM9" id="Oex-eZ-rls"/>
+                        <outlet property="mainLabelView" destination="6gt-Bj-3Nn" id="bDq-8m-2l7"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="463" y="656.5"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="FQh-OL-RRg">
+            <objects>
+                <notificationController hidesWhenLoading="NO" id="bMb-Cj-0uj">
+                    <items>
+                        <label width="136" height="49" alignment="left" text="Alert Label" id="3c6-B0-hQu"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="sample2" id="pfE-Pu-TB1">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="sashColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </notificationCategory>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="3c6-B0-hQu" id="Wir-Vk-ukt"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="156" y="1112"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="PMt-dh-JpP">
+            <objects>
+                <notificationController hidesWhenLoading="NO" id="fyJ-CH-zbp">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="P6t-gc-GX8"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="notification" id="6v5-Dd-uJs"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="P6t-gc-GX8" id="sjF-Da-pYS"/>
+                        <segue destination="BOy-ps-Swy" kind="relationship" relationship="dynamicNotificationInterface" id="hco-ZR-1XM"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="156" y="1348"/>
+        </scene>
+        <!--Sride User Notification Interface Controller-->
+        <scene sceneID="h5W-D1-IYA">
+            <objects>
+                <controller hidesWhenLoading="NO" id="BOy-ps-Swy" customClass="SrideUserNotificationInterfaceController" customModule="WatchNotificationSample_WatchKit_Extension"/>
+            </objects>
+            <point key="canvasLocation" x="456" y="1348"/>
+        </scene>
+    </scenes>
+</document>
